@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor1: #640101;
+    --cor2: #FFE4C4;
+    --cor3: #555555;
+    --cor4: #D4AF37;
+    --font1: "Libre Bodoni", serif;
+    --font2: "Outfit", sans-serif;
+}
+
+body {
+    background-color: #0d0907;
+}
+
+.nav {
+    margin-bottom: 1vh;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 6%;
+    list-style: none;
+    padding: 2%;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-family: var(--font2);
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-list a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #d4af37;
+    transition: width .3s ease;
+}
+
+.nav-list a:hover::after {
+    width: 100%;
+}
+
+.logo {
+    font-family: var(--font1), serif;
+    font-size: 5em;
+    font-weight: 600;
+    margin: 0;
+}
+
+.header {
+    background-color: var(--cor1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1000;
+}
+
+header > h1 {
+    color: white;
+    text-align: center;
+    font-size: 6em;
+    font-family: var(--font1);
+    font-kerning: 1%;
+}
+
+header > p {
+    color: var(--cor4);
+    font-family: var(--font2);
+    text-align: center;
+    padding-bottom: 1%;
+}
+
+main {
+    padding-top: 220px; 
+}
+
+.hero-section {
+    width: 100%;
+    min-height: 80vh;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 30%, rgba(0, 0, 0, 0.3) 100%), 
+                url('../imagem/bgcardapio.jpg') no-repeat center center / cover;
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+}
+
+.hero-content {
+    max-width: 480px;
+}
+
+.titulo {
+    font-family: var(--font1);
+    font-size: 2.8rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 18px;
+    color: #ffffff;
+}
+
+.descricao {
+    font-family: var(--font2);
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 28px;
+}
+
+.botao-reserva {
+    display: inline-block;
+    padding: 12px 28px;
+    border: 1px solid var(--cor4);
+    background-color: transparent;
+    color: var(--cor4);
+    font-family: var(--font2);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.botao-reserva:hover {
+    background-color: var(--cor4);
+    color: #1a0505;
+}
